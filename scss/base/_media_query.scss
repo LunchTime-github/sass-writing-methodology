@@ -1,0 +1,21 @@
+@mixin mq($media) {
+  @if $media == nth($mq_data, 1) {
+    @content;
+  } @else if $media == nth($mq_data, 2) {
+    @media (min-width: nth($mq_width, 2)) {
+      @content;
+    }
+  } @else if $media == nth($mq_data, 3) {
+    @media (min-width: nth($mq_width, 3)) {
+      @content;
+    }
+  } @else if $media == nth($mq_data, 4) {
+    @media (min-width: nth($mq_width, 4)) {
+      @content;
+    }
+  } @else if $media == nth($mq_data, 5) {
+    @media (min-width: nth($mq_width, 5)) {
+      @content;
+    }
+  }
+}

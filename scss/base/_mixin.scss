@@ -1,0 +1,13 @@
+@mixin white_box {
+  background-color: $color_white;
+  box-shadow: $box_shadow;
+
+  @if ($gutter_harf_check > 1) {
+    border-radius: $gutter / 2;
+    @include mq(nth($mq_data, $gutter_harf_check)) {
+      border-radius: $gutter;
+    }
+  } @else {
+    border-radius: $gutter;
+  }
+}

@@ -1,0 +1,9 @@
+.lo_aside {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $aside_width;
+  height: 100vh;
+  z-index: 1280;
+}

@@ -1,0 +1,14 @@
+.ct_box {
+  @extend %__layout_lg_16;
+  @extend %__layout_16;
+  &-mideum {
+    @extend %__layout_lg_8;
+    @extend %__layout_sm_16;
+    @extend %__layout_16;
+  }
+  &-small {
+    @extend %__layout_lg_4;
+    @extend %__layout_sm_8;
+    @extend %__layout_16;
+  }
+}

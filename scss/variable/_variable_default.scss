@@ -1,0 +1,15 @@
+// rem Size Data
+$html_font_size: 10px;
+
+// aside 값
+$aside_width: 280px;
+
+// border Style
+$border_highlight_width: 1px;
+$border_normal_width: 1px;
+
+$border_highlight: $border_highlight_width solid $color_main;
+$border_normal: $border_normal_width solid $color_border;
+
+//boxShadow Style
+$box_shadow: 3px 3px 6px rgba($color_black, 0.2);

@@ -1,0 +1,9 @@
+// MqdiaQuery
+$mq_data: "", "sm", "md", "lg", "xl";
+$mq_width: "0", "567px", "768px", "992px", "1200px"; // mq_data 기준으로 해당 길이 기준 min-width 값으로 MediaQuery 적용
+
+// Layout
+$grid_length: 16; // 그리드의 크기
+$gutter: 1.5rem !default; // 레이아웃의 여백
+$top_bottom_gutter_check: true; // 상하 여백 설정여부
+$gutter_harf_check: 3; // mq_data 배열에서 해당값의 위치보다 작은 값의 반응형에서는 Gutter 값을 절반으로

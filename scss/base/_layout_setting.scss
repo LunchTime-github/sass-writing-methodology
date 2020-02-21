@@ -1,0 +1,35 @@
+@mixin layout($mq, $i) {
+  $mq_str: if($mq == "", #{$mq}, "_#{$mq}");
+  $gutter_data: if(
+    $gutter_harf_check >= $i,
+    $gutter / 2,
+    $gutter
+  );
+  $padding: if($top_bottom_gutter_check, $gutter_data, $gutter_data 0);
+
+  @for $j from 1 through $grid_length {
+    $width: $j / $grid_length * 100%;
+    %__layout#{$mq_str}_#{$j} {
+      flex: 0 0 $width;
+      max-width: $width;
+      padding: $padding;
+    }
+  }
+
+  %__row#{$mq_str} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@for $i from 1 through length($mq_data) {
+  $mq: nth($mq_data, $i);
+
+  @if ($i == 1) {
+    @include layout($mq, $i);
+  } @else {
+    @media (min-width: nth($mq_width, $i)) {
+      @include layout($mq, $i);
+    }
+  }
+}
