@@ -5,7 +5,7 @@
     $gutter / 2,
     $gutter
   );
-  $padding: if($top_bottom_gutter_check, $gutter_data, $gutter_data 0);
+  $padding: if($top_bottom_gutter_check, $gutter_data, 0 $gutter_data);
 
   @for $j from 1 through $grid_length {
     $width: $j / $grid_length * 100%;
